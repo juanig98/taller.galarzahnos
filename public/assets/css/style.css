@@ -1,5 +1,6 @@
 @import url("flaticon.css");
 @import url("font-awesome.css");
+@import url("icomoon.css");
 
 @font-face {
   font-family: "EurostileBoldItalic";
@@ -19,7 +20,8 @@
 
   --color-deg: linear-gradient(180deg, #f1a920, #fde826);
 
-  --background: #4b4b4b;
+  --section-bg: #4b4b4b;
+  --section-bg-dark: #333333;
 }
 
 .site-logo {
@@ -43,17 +45,16 @@
   text-transform: uppercase;
   color: #b6b8c2;
   margin-top: -10px;
-  margin-left: 2.25rem;
+  margin-left: 1.75rem;
 }
 
 /* Base */
 html {
   overflow-x: hidden;
 }
- 
 
 section {
-  background-color: #333333;
+  background-color: var(--section-bg-dark);
 }
 
 .site-section {
@@ -73,7 +74,7 @@ body {
   height: 100%;
   position: fixed;
   z-index: 7100;
-  background: var(--background);
+  background: var(--section-bg);
   top: 0;
   left: 0;
   right: 0;
@@ -124,12 +125,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
+h5 {
   font-family: "EurostileBoldItalic", sans-serif !important;
   color: var(--gray-2);
 }
@@ -153,9 +149,8 @@ a.whatsapp:hover {
   color: #00e613;
 }
 
-a.whatsapp-icon {
-  margin-top: 13px;
-  margin-left: -2px;
+.whatsapp-icon {
+  padding-top: 0.85rem;
 }
 
 h1.big-text {
@@ -187,6 +182,26 @@ h1.big-text {
 
 .color-white-opacity-5 {
   color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+  background-color: var(--section-bg-dark);
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0px;
+  padding: 25px 0px;
+  color: var(--gray-2);
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+footer p a,
+footer p a:hover {
+  color: var(--orange-1);
 }
 
 body:after {
@@ -223,14 +238,14 @@ body:after {
   box-shadow: none !important;
 }
 .btn.btn-primary {
-  background: #f1a920;
-  border-color: #f1a920;
-  color: #fff;
+  background: #fde826;
+  background: linear-gradient(180deg, #fde826, #f1a920);
+  border-color: #fde826;
+  color: var(--section-bg-dark);
 }
 .btn.btn-primary:hover {
-  background: #000;
-  border-color: #000;
-  color: #fff;
+  background: var(--gray-0);
+  border-color: var(--gray-0);
 }
 .btn.btn-primary.btn-black--hover:hover {
   background: #666666;
@@ -254,6 +269,10 @@ body:after {
 
 .first-bg {
   background-image: url("../images/background.jpg");
+}
+
+.n404-bg {
+  background: var(--section-bg);
 }
 .form-control {
   height: 43px;
@@ -292,41 +311,6 @@ body:after {
   .site-section-heading {
     font-size: 3rem;
   }
-}
-
-.site-footer {
-  padding: 4em 0;
-  background: #333333;
-}
-@media (min-width: 768px) {
-  .site-footer {
-    padding: 8em 0;
-  }
-}
-.site-footer .border-top {
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-.site-footer p {
-  color: #737373;
-}
-.site-footer h2,
-.site-footer h3,
-.site-footer h4,
-.site-footer h5 {
-  color: #fff;
-}
-.site-footer a {
-  color: #999999;
-}
-.site-footer a:hover {
-  color: white;
-}
-.site-footer ul li {
-  margin-bottom: 10px;
-}
-.site-footer .footer-heading {
-  font-size: 16px;
-  color: #fff;
 }
 
 .bg-text-line {
@@ -511,6 +495,7 @@ body:after {
   position: relative;
   left: 0;
   top: -5px;
+  cursor: pointer;
 }
 .site-navbar .site-navigation .site-menu {
   margin-bottom: 0;
@@ -875,7 +860,7 @@ body:after {
   color: #fff !important;
 }
 .sticky-wrapper.is-sticky .site-navbar {
-  background: #4b4b4b;
+  background: var(--section-bg-dark);
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.1);
   box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.1);
@@ -979,7 +964,7 @@ body:after {
   position: absolute;
   bottom: -90px;
   right: -90px;
-  background: #f8f9fa;
+  background: var(--section-bg);
 }
 @media (max-width: 991.98px) {
   .circle-bg:after {
@@ -1028,7 +1013,7 @@ body:after {
 }
 
 .bg-light {
-  background: var(--background) !important;
+  background: var(--section-bg) !important;
 }
 
 .site-blocks-vs .bg-image {
@@ -2077,7 +2062,6 @@ body:after {
 
 .social-media {
   display: inline-block;
-  float: left;
   margin-bottom: 0px;
   padding: 0;
 }
@@ -2303,13 +2287,6 @@ body:after {
   color: #fff;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-}
-
-.footer-subscribe .btn {
-  height: 43px;
-  line-height: 1;
-  background: #fff !important;
-  color: #000 !important;
 }
 
 .cta-big-image > .container {
@@ -2783,4 +2760,48 @@ figure figcaption {
   font-size: 0.8rem;
 }
 
-/*PRELOADING------------ */
+[data-aos^="fade"][data-aos^="fade"] {
+  opacity: 0.8;
+}
+
+.blured h1:not(.orange-deg) {
+  color: white;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3),
+    /* Sombra suave para el texto */ 0 0 10px rgba(0, 0, 0, 0.5),
+    /* Sombra difusa para el desenfoque */ 0 0 50px rgba(0, 0, 0, 0.3); /* Efecto de desenfoque adicional */
+}
+.blured h1.orange-deg {
+  background: linear-gradient(180deg, #f1a920, #fde826);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* LOGO PAGE */
+.logopage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--section-bg-dark);
+} 
+.logopage .site-logo h1 {
+  font-family: "EurostileBoldItalic", sans-serif !important;
+  font-size: 12rem;
+  background: linear-gradient(0deg, #d6e6f5, #b6b8c2);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+  letter-spacing: -.25rem;
+  word-spacing: -2rem;
+}
+.logopage .site-logo h2 {
+  font-family: "EurostileBoldItalic", sans-serif !important;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #b6b8c2;
+  margin-top: -2rem;
+  margin-left: 12rem;
+}
